@@ -623,12 +623,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalOverlay = document.getElementById('modal-overlay');
     const modalX = document.getElementById('modal-x');
     const closeBtn = document.getElementById('modal-close-btn');
+    const canUsePointerTilt = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     let lastFocusedElement = null;
 
     function openModal() {
         lastFocusedElement = document.activeElement;
         modalOverlay.classList.add('open');
         modalOverlay.setAttribute('aria-hidden', 'false');
+        if (!canUsePointerTilt) {
+            const card = document.getElementById('modal-card');
+            if (card) {
+                card.style.transform = '';
+            }
+        }
         startCelebration();
         closeBtn.focus();
         
@@ -661,6 +668,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     document.addEventListener('mousemove', (e) => {
+        if (!canUsePointerTilt) return;
         if (!modalOverlay.classList.contains('open')) return;
         const card = document.getElementById('modal-card');
         const rect = card.getBoundingClientRect();
@@ -681,6 +689,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     document.addEventListener('mouseleave', () => {
+        if (!canUsePointerTilt) return;
         const card = document.getElementById('modal-card');
         if (card) {
             card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
