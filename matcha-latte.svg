@@ -1,0 +1,33 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ly matcha latte nhìn từ trên xuống">
+  <defs>
+    <radialGradient id="matcha" cx="50%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#EFFFF0"/>
+      <stop offset="28%" stop-color="#8DDA82"/>
+      <stop offset="66%" stop-color="#4FA84C"/>
+      <stop offset="100%" stop-color="#27672F"/>
+    </radialGradient>
+    <linearGradient id="straw" x1="118" y1="18" x2="151" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF9E8"/>
+      <stop offset="1" stop-color="#D8F0CF"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#05110C" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <circle cx="90" cy="90" r="70" fill="#F6E66A" opacity="0.22"/>
+  <circle cx="90" cy="90" r="58" fill="rgba(255,255,255,0.16)" stroke="#FFF7D1" stroke-width="5" filter="url(#softShadow)"/>
+  <circle cx="90" cy="90" r="48" fill="url(#matcha)" stroke="#DFF4DA" stroke-width="3"/>
+
+  <path d="M92 69C102 58 122 65 124 82C126 101 105 115 91 126C77 115 56 101 58 82C60 65 80 58 90 69L91 70L92 69Z" fill="#FFFDF2" opacity="0.94"/>
+  <path d="M91 77C98 70 111 75 112 86C113 97 100 106 91 114C82 106 69 97 70 86C71 75 84 70 91 77Z" fill="#E8F7E5" opacity="0.65"/>
+
+  <g transform="rotate(32 126 53)">
+    <rect x="120" y="17" width="12" height="78" rx="6" fill="url(#straw)" stroke="#EEF9E8" stroke-width="2"/>
+    <path d="M121 28H132M121 43H132M121 58H132M121 73H132" stroke="#62B85D" stroke-width="3"/>
+  </g>
+
+  <circle cx="69" cy="74" r="5" fill="#F9FFF7" opacity="0.65"/>
+  <circle cx="113" cy="103" r="4" fill="#F9FFF7" opacity="0.5"/>
+  <path d="M53 94C58 122 83 139 111 132" stroke="#BFE8B6" stroke-width="3" stroke-linecap="round" opacity="0.42"/>
+</svg>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi cậu một ngày 1/6 thật dịu dàng</title>
+    <meta name="description" content="Một tấm thiệp tương tác nhỏ với hoa hướng dương và matcha latte, gửi tặng nhân ngày Quốc tế Thiếu nhi">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Dancing+Script:wght@600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <canvas id="main-canvas"></canvas>
+    <div id="flowers-container"></div>
+
+    <main class="ui-layer">
+        <p class="eyebrow">một món quà nhỏ cho ngày 1/6</p>
+        <h1 class="ambient-title" id="ambient-title">Thu thập những bông hướng dương nhé</h1>
+        <p class="ambient-note">Mỗi bông hoa là một lời nhắn dịu dàng được cất riêng cho cậu.</p>
+        <div class="progress-wrapper">
+            <div class="progress-meta">
+                <span class="progress-count" id="progress-count">0/10 bông hoa</span>
+                <span class="progress-state" id="progress-state">đang chờ ánh sáng đầu tiên</span>
+            </div>
+            <div class="progress-container" aria-label="Tiến trình thu thập hoa" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p class="sr-only" id="live-status" aria-live="polite">Chưa thu thập bông hoa nào.</p>
+        </div>
+    </main>
+
+    <div id="bubbles-container"></div>
+    <div id="floating-texts-container"></div>
+
+    <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+        <section class="modal-card" id="modal-card" aria-modal="true" role="dialog" aria-labelledby="modal-title">
+            <div class="modal-color-bar"></div>
+            <button class="modal-x" id="modal-x" aria-label="Đóng">×</button>
+            <div class="modal-body">
+                <div class="modal-icon-badge">
+                    <div class="badge-ring"></div>
+                    <div class="matcha-topview" aria-hidden="true">
+                        <div class="cup-rim">
+                            <div class="matcha-liquid">
+                                <div class="latte-art-heart"></div>
+                            </div>
+                            <div class="topview-straw"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="modal-kicker">gửi riêng cho cậu</p>
+                <h2 class="modal-heading" id="modal-title">Chúc cậu luôn vui tươi và hồn nhiên như đứa trẻ ấy nhé</h2>
+                <div class="modal-separator">
+                    <span class="sep-dot"></span>
+                    <span class="sep-line"></span>
+                    <span class="sep-dot"></span>
+                </div>
+                <div class="modal-message">
+                    <p>Mới ngày nào còn là em bé full-time mà giờ chỉ còn được làm part-time thôi.</p>
+                    <p>Chúc người lớn full-time hôm nay có ngày đi chơi với cốt thật là vui vẻ nhé, tranh thủ có hôm nay được làm em bé full-time thì hãy chơi thật đã đi nhé hhh. Và nhớ là đi đường cẩn thận nhé.</p>
+                    <p>Chúc cậu luôn có một góc thật <em class="hl-yellow">ấm áp</em> để trở về, một trái tim đủ <em class="hl-green">dịu dàng</em> để tin vào điều tốt đẹp, và một nụ cười không phải gồng lên mới nở được.</p>
+                </div>
+                <button class="modal-close-btn" id="modal-close-btn">
+                    Giữ lại lời chúc này
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
