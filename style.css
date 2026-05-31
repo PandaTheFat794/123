@@ -375,21 +375,32 @@ body {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 16px; height: 16px;
-    background: radial-gradient(circle, #5d3a1a 30%, #3e2723 100%);
+    width: 20px; height: 20px;
+    background:
+        radial-gradient(circle at 45% 42%, #7a461b 0 18%, transparent 19%),
+        radial-gradient(circle at 62% 58%, #4b2a14 0 12%, transparent 13%),
+        radial-gradient(circle, #6b3b17 0 48%, #3b2110 70%, #211107 100%);
     border-radius: 50%;
     z-index: 2;
-    box-shadow: 0 0 4px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255, 196, 61, 0.28);
+    box-shadow:
+        inset 0 0 0 2px rgba(255, 213, 79, 0.08),
+        0 0 5px rgba(0,0,0,0.6);
 }
 .bubble-sunflower .fp, .fall-flower .fp {
     position: absolute;
     top: 50%; left: 50%;
-    width: 12px; height: 26px;
-    border-radius: 50% 50% 40% 40%;
+    width: 10px; height: 28px;
+    border-radius: 70% 70% 45% 45%;
     transform-origin: bottom center;
     z-index: 1;
-    margin-left: -6px; 
-    margin-top: -26px;   
+    margin-left: -5px;
+    margin-top: -28px;
+    background:
+        linear-gradient(180deg, #fff176 0%, #ffd54f 38%, #f9a825 78%, #ef8f00 100%);
+    box-shadow:
+        inset 0 -3px 4px rgba(150, 80, 0, 0.16),
+        0 1px 2px rgba(0, 0, 0, 0.14);
 }
 
 

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let poppedCount = 0;
     const GOAL_COUNT = 10;
-    const PETAL_ANGLES = [0, 45, 90, 135, 180, 225, 270, 315];
+    const PETAL_ANGLES = Array.from({ length: 16 }, (_, index) => index * 22.5);
     const progressStates = [
         "đang chờ ánh sáng đầu tiên",
         "một chút nắng đã ghé qua",
@@ -327,12 +327,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isSunflower) {
             bubbleEl.className = 'bubble type-sunflower';
             innerEl.className = 'bubble-inner bubble-sunflower';
-            const hue = 42 + Math.floor(Math.random() * 16);
-            const petalColor = `hsl(${hue}, 92%, 60%)`;
             PETAL_ANGLES.forEach(angle => {
                 const petal = document.createElement('div');
                 petal.classList.add('fp');
-                petal.style.background = `linear-gradient(180deg, hsl(${hue+10}, 98%, 80%), ${petalColor})`;
                 petal.style.transform = `rotate(${angle}deg)`;
                 innerEl.appendChild(petal);
             });
@@ -518,13 +515,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const drift = (Math.random() - 0.5) * 180;
         wrapper.style.setProperty('--drift', `${drift}px`);
         
-        const hue = 42 + Math.floor(Math.random() * 16);
-        const petalColor = `hsl(${hue}, 92%, 60%)`;
-        
         PETAL_ANGLES.forEach(angle => {
             const petal = document.createElement('div');
             petal.className = 'fp';
-            petal.style.background = `linear-gradient(180deg, hsl(${hue+10}, 98%, 80%), ${petalColor})`;
             petal.style.transform = `rotate(${angle}deg)`;
             wrapper.appendChild(petal);
         });
